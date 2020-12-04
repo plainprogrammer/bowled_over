@@ -1,10 +1,11 @@
 require "date"
 
 class Game
-  attr_reader :date, :time
+  attr_reader :date, :time, :played_at
 
   def initialize
-    @time = Time.now.strftime("%H:%M")
-    @date = Date.today.iso8601
+    @played_at = DateTime.now
+    @time = @played_at.strftime("%H:%M")
+    @date = @played_at.to_date.iso8601
   end
 end
