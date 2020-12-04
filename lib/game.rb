@@ -5,6 +5,6 @@ class Game
 
   def initialize
     @time = Time.now.strftime("%H:%M")
-    @date = Date.today
+    @date = Date.today.iso8601
   end
 end
