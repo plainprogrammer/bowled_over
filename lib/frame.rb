@@ -16,4 +16,8 @@ class Frame
   def spare?
     @rolls.sum == 10 && @rolls.first < 10
   end
+
+  def strike?
+    @rolls.first == 10
+  end
 end
