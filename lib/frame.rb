@@ -12,4 +12,8 @@ class Frame
   def open?
     @rolls.sum < 10
   end
+
+  def spare?
+    @rolls.sum == 10 && @rolls.first < 10
+  end
 end
