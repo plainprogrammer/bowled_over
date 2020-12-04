@@ -32,4 +32,10 @@ RSpec.describe Game do
       end
     end
   end
+
+  describe "frames" do
+    it "returns an array of ten Frames" do
+      expect(subject.frames).to match_array(Array.new(10, be_a(Frame)))
+    end
+  end
 end
