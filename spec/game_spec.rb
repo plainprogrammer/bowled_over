@@ -26,6 +26,10 @@ RSpec.describe Game do
       it "reports the game's date as 2020-01-01" do
         expect(subject.date).to eq("2020-01-01")
       end
+
+      it "reports the game's time as 21:00" do
+        expect(subject.time).to eq("21:00")
+      end
     end
   end
 end
