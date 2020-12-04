@@ -14,5 +14,14 @@ RSpec.describe Game do
         expect(subject.time).to eq(Time.now.strftime("%H:%M"))
       end
     end
+
+    context "with a DateTime provided as played_at argument" do
+      subject { Game.new(played_at: supplied_datetime) }
+      let(:supplied_datetime) { DateTime.parse("2020-01-01T21:00:00-07:00") }
+
+      it "sets the game's played_at attribute to the supplied value" do
+        expect(subject.played_at).to eq(supplied_datetime)
+      end
+    end
   end
 end
