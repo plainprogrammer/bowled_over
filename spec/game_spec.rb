@@ -22,6 +22,10 @@ RSpec.describe Game do
       it "sets the game's played_at attribute to the supplied value" do
         expect(subject.played_at).to eq(supplied_datetime)
       end
+
+      it "reports the game's date as 2020-01-01" do
+        expect(subject.date).to eq("2020-01-01")
+      end
     end
   end
 end
